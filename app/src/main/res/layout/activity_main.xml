@@ -24,7 +24,7 @@
         <EditText
             android:id="@+id/et_uid"
             android:textColor="@color/black"
-            android:text="@{login.email}"
+            android:text="@={login.email}"
             android:hint="@{login.emailhint}"
             android:layout_margin="20dp"
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
         <EditText
             android:id="@+id/et_pass"
             android:textColor="@color/black"
-            android:text="@{login.passwod}"
+            android:text="@={login.passwod}"
             android:hint="@{login.passwordhint}"
             android:layout_margin="20dp"
             android:layout_width="match_parent"
