@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="login"
+            type="chips.in.mvvmexample.viewmodel.UserModel" />
+        
+        <variable
+            name="userloginevent"
+            type="chips.in.mvvmexample.commands.UserLogin" />
+        
+    </data>
+
+    <LinearLayout
+        android:gravity="center"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_uid"
+            android:textColor="@color/black"
+            android:text="@{login.email}"
+            android:hint="@{login.emailhint}"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:textColor="@color/black"
+            android:text="@{login.passwod}"
+            android:hint="@{login.passwordhint}"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:onClick="@{(v)->userloginevent.OnLoginClick()}"
+            android:id="@+id/login_btn"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="Login"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>
